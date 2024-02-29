@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Home from './Components/ItemFolder/HomeFolder/Home';
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Items from './Components/ItemFolder/Items';
 import ShowCart from './Components/CartFolder/ShowCart';
 import { FaShoppingCart } from "react-icons/fa";
+import Users from './Components/UserFolder/Users';
 
 
 function App() {
@@ -37,11 +38,19 @@ function App() {
                     Home
                   </a>
                 </li>
+
                 <li className="nav-item">
                   <a className="nav-link" href="/Items">
                     Items
                   </a>
                 </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/Register">
+                    Register
+                  </a>
+                </li>
+
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -50,7 +59,7 @@ function App() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    User
+                    Account
                   </a>
                   <div className="dropdown-menu">
                     <a className="dropdown-item" href="/UserManagement">
@@ -58,11 +67,7 @@ function App() {
                     </a>
                   </div>
 
-                  <li className="nav-item">
-                  <a className="nav-link" href="/Items">
-                    About Us
-                  </a>
-                </li>
+                  
                 </li>
                 <li className="nav-item">
                   <ShowCart />
@@ -82,6 +87,8 @@ function App() {
         <Route path="/" element={<Home/>} />
 
         <Route path="/Items" element={<Items/>} /> 
+
+        <Route path="/Register" element={<Users/>} />
 
         {/* <Route path="/Cart" element={<Cart/>} />
 
