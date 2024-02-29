@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import ItemProps from "./ItemProps";
-import GetItems from "./GetItems";
+
 
 function CreateItem() {
 
@@ -39,7 +39,6 @@ function CreateItem() {
       <div>
         <div className="container-fluid">
           <div className="row">{itemArray}</div>
-         <GetItems/>
         </div>
       </div>
     );
