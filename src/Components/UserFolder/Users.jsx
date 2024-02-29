@@ -12,7 +12,7 @@ function Users() {
 
     return ( 
 
-<fieldset>
+<div>
 <form className= "form" onSubmit={e => {
     e.preventDefault();
     
@@ -88,10 +88,7 @@ function Users() {
 
           <br />
     </form>
-    
-
-
-</fieldset>
+    </div>
 
 
 
