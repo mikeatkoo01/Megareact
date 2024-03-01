@@ -1,3 +1,5 @@
+import Footer from "../../Footer";
+
 function Home(){
 
     return(
@@ -7,6 +9,10 @@ function Home(){
 <h1>LOG IN TO PAGE GOES HERE! - YES IT DOES</h1>
 <p>Make your purchase order dreams come true</p>
 
+
+      <br/>
+
+        <Footer/>
 
         </div>
     )
