@@ -5,9 +5,23 @@ function Home(){
     return(
         <div>
 
-<h1>Welcome to stock management</h1>
-<h1>LOG IN TO PAGE GOES HERE! - YES IT DOES</h1>
-<p>Make your purchase order dreams come true</p>
+
+<header className="block row center">
+      <div>
+        
+          <h1>Welcome to MEGAstore</h1>
+    
+      </div>
+      <div>
+       
+         
+      </div>
+    </header>
+
+
+
+<h1>LOG IN HERE! </h1>
+<p> We are here to make your mundane retail dreams come true</p>
 
 
       <br/>

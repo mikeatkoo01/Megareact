@@ -6,7 +6,8 @@ import Items from './Components/ItemFolder/Items';
 import ShowCart from './Components/CartFolder/ShowCart';
 import { FaShoppingCart } from "react-icons/fa";
 import Users from './Components/UserFolder/Users';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DisplayDemo from './Components/DemoFolder/DisplayDemo';
 
 
 
@@ -91,6 +92,8 @@ function App() {
         <Route path="/Items" element={<Items/>} /> 
 
         <Route path="/Register" element={<Users/>} />
+
+        <Route path="/Demo" element={<DisplayDemo/>} />
 
         {/* <Route path="/Cart" element={<Cart/>} />
 
