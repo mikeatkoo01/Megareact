@@ -1,4 +1,11 @@
+import { FaShoppingCart } from "react-icons/fa";
+
+
+
+
+
 function ShowCart() {
+
     return (
       <div>
         <button
@@ -29,7 +36,10 @@ function ShowCart() {
           <div class="offcanvas-body"></div>
         </div>
       </div>
+      
     );
+
+    
   }
   
   export default ShowCart;

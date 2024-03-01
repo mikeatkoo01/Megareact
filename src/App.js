@@ -6,8 +6,7 @@ import Items from './Components/ItemFolder/Items';
 import ShowCart from './Components/CartFolder/ShowCart';
 import { FaShoppingCart } from "react-icons/fa";
 import Users from './Components/UserFolder/Users';
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -97,7 +96,7 @@ function App() {
         <Route path="/About us" element={<AboutUs/>} />  */}
 
       </Routes>
-
+{/* // footer needed*/}
     </Router>
 
   </header>
