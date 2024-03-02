@@ -1,18 +1,25 @@
 export default function Basket(props) {
     const { cartItems, onAdd, onRemove } = props;
+
+    // this is for order summary in the cart
+    // used to calculate including tax
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     const taxPrice = itemsPrice * 0.14;
     const shippingPrice = itemsPrice > 2000 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
     return (
+      // html tag to have element to the side
       <aside className="block col-1">
         <h2>Cart Items</h2>
         <div>
+          {/* cartItem passed as prop from displayDemo. conditional rendering
+          // if cart item is equal to 0 then render this div*/}
           {cartItems.length === 0 && <div>Cart is empty</div>}
           {cartItems.map((item) => (
             <div key={item.id} className="row">
               <div className="col-2">{item.name}</div>
               <div className="col-2">
+                {/* onRemove and onAdd functions passed as props from displayDemo */}
                 <button onClick={() => onRemove(item)} className="remove">
                   -
                 </button>{' '}
@@ -22,11 +29,12 @@ export default function Basket(props) {
               </div>
   
               <div className="col-2 text-right">
+                {/* multiplying quantity of item times by price fixed to 2 decimal places */}
                 {item.qty} x ${item.price.toFixed(2)}
               </div>
             </div>
           ))}
-  
+  {/* if cart is not empty render the summary section: */}
           {cartItems.length !== 0 && (
             <>
               <hr></hr>
