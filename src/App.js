@@ -54,6 +54,12 @@ function App() {
                   </a>
                 </li>
 
+                <li className="nav-item">
+                  <a className="nav-link" href="/cart">
+                    Cart
+                  </a>
+                </li>
+
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -93,7 +99,7 @@ function App() {
 
         <Route path="/Register" element={<Users/>} />
 
-        <Route path="/Demo" element={<DisplayDemo/>} />
+        <Route path="/Cart" element={<DisplayDemo/>} />
 
         {/* <Route path="/Cart" element={<Cart/>} />
 

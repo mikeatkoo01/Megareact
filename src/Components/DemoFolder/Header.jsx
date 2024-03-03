@@ -3,7 +3,7 @@ export default function Header(props) {
       <header className="block row center">
         <div>
           <a href="#/">
-            <h1>Small Shopping Cart</h1>
+            <h1>Mega Shopping Cart</h1>
           </a>
         </div>
         <div>
@@ -15,7 +15,7 @@ export default function Header(props) {
               ''
             )}
           </a>{' '}
-          <a href="#/signin"> SignIn</a>
+          <a href="#/signin"> Items</a>
         </div>
       </header>
     );

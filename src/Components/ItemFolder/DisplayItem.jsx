@@ -1,11 +1,13 @@
 
 import axios from "axios";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-function DisplayItem() {
+function DisplayItem(props) {
 
 
     const [items, setItems] = useState("");
+    const { item, onAdd } = props;
 
 
 
@@ -36,7 +38,7 @@ function DisplayItem() {
                         <div className='card-text'>
 
                             <p className='card-title '> <b>Name:</b> {item.name}</p>
-                            <p><b>Price:</b> {item.price}</p>
+                            <p><b>Price:</b>{item.price}</p>
                             <p><b>Qty:</b> {item.quantity}</p>
                             
                            
@@ -56,6 +58,15 @@ function DisplayItem() {
                             .catch(err => console.error(err));
                     }}>DELETE</button></p>
                     <p><button> BUY </button></p>
+
+                    <div>
+        
+        <h3>{item.name}</h3>
+        <div>£{item.price}</div>
+        <div>
+          <button onClick={() => onAdd(item)}>Add To Cart</button>
+        </div>
+      </div>
 
                         </div>
                     </div>
