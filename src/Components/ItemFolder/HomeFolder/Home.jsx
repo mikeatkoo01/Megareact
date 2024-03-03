@@ -13,7 +13,26 @@ function Home(){
     return(
           <div>
 
-<h1 className="welcome">Welcome to MEGA...tron</h1>
+
+
+  <div class="scroll-container">
+    <div class="scroll-text">
+      <ul>
+        <li>
+          <h1 class="quote">Welcome to the MEGA...tron Superstore. Welcome to the MEGA...tron Superstore. Welcome to the MEGA...tron Superstore.</h1>
+
+        </li>
+        
+       
+      </ul>
+    </div>
+  </div>
+
+
+  
+
+
+
 <img src={logoB} width="400" height="300" alt="LogoB" />
 <br/>
 <br/>

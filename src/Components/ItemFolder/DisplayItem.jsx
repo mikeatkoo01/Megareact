@@ -71,8 +71,34 @@ function DisplayItem() {
     return (
         <>
         <br />
+        <div class="content-slider">
+  <div class="slider">
+    <div class="mask">
+      <ul>
+        <li class="anim1">
+          <div class="quote">We Do This Only For The Benefit Of The Decepticons.</div>
+
+        </li>
+        <li class="anim2">
+          <div class="quote">We Do This Only For The Benefit Of The Decepticons.</div>
+          
+        </li>
+        <li class="anim3">
+          <div class="quote">We Do This Only For The Benefit Of The Decepticons.</div>
+          
+        </li>
+        <li class="anim4">
+          <div class="quote">We Do This Only For The Benefit Of The Decepticons.</div>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
+
+
         <h2>Current Stock</h2>
-            <button class="btn btn-light btn-lg" onClick={handleClick}>Click to see what you can buy below...For The Benefit Of My Decepticons</button>
+            <button class="btn btn-light btn-lg" onClick={handleClick}>Click to see what you can buy below...</button>
             <div  className='container'>
                 <div className='row'>
                 
