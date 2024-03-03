@@ -72,7 +72,7 @@ function DisplayItem() {
         <>
         <br />
         <h2>Current Stock</h2>
-            <button class="btn btn-light btn-lg" onClick={handleClick}>Display all Stock</button>
+            <button class="btn btn-light btn-lg" onClick={handleClick}>Click to see what you can buy below...For The Benefit Of My Decepticons</button>
             <div  className='container'>
                 <div className='row'>
                 

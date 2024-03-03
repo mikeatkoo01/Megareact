@@ -45,7 +45,7 @@ function Users() {
 {/* this is the input form, to create a user */}
 
 
-<h1>NEW USER? REGISTER HERE &nbsp;</h1>
+<h1>Here's A Survival Tip...! REGISTER HERE &nbsp;</h1>
 <label htmlFor="name"> First Name &nbsp;</label>
 <input
             value={firstName}

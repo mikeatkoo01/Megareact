@@ -68,3 +68,18 @@ button.badge {
   color: #ffffff;
   width: 1.5rem;
 }
+
+.bg-green {
+  background-color: rgb(248, 250, 245);
+}
+
+html body {
+  background-color: rgb(248, 250, 245);
+
+}
+
+.welcome {
+
+  text-align: center;
+}
+

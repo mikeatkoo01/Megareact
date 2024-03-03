@@ -8,6 +8,8 @@ import { FaShoppingCart } from "react-icons/fa";
 import Users from './Components/UserFolder/Users';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DisplayDemo from './Components/DemoFolder/DisplayDemo';
+import logoA from './Components/logoA.PNG'
+import DisplayItem from './Components/ItemFolder/DisplayItem';
 
 
 
@@ -18,8 +20,10 @@ function App() {
   
     <Router>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-          <div className="container-fluid">
+     
+          <div className="container-fluid bg-green ">
             <a className="navbar-brand" href="/"></a>
+            <img src={logoA} width="80" height="50" alt="Logo" />
             <button
               className="navbar-toggler"
               type="button"
@@ -41,10 +45,15 @@ function App() {
                     Home
                   </a>
                 </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/shop">
+                    Shop
+                  </a>
+                </li>
 
                 <li className="nav-item">
                   <a className="nav-link" href="/Items">
-                    Items
+                    Back Office
                   </a>
                 </li>
 
@@ -80,6 +89,7 @@ function App() {
               </ul>
             </div>
           </div>
+
 </nav>
 
 
@@ -95,9 +105,9 @@ function App() {
 
         <Route path="/Demo" element={<DisplayDemo/>} />
 
-        {/* <Route path="/Cart" element={<Cart/>} />
+        <Route path="/Shop" element={<DisplayItem/>} />
 
-        <Route path="/About us" element={<AboutUs/>} />  */}
+        {/* <Route path="/About us" element={<AboutUs/>} />  */} 
 
       </Routes>
 
