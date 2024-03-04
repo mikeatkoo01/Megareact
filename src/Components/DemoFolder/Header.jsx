@@ -8,7 +8,7 @@ export default function Header(props) {
       <header className="block row center">
         <div>
           <a href="#/">
-            <h1>Small Shopping Cart</h1>
+            <h1>Mega Shopping Cart</h1>
           </a>
         </div>
         {/* cart and sign in with anchors. Sign in not yet implemented -  */}
@@ -22,7 +22,7 @@ export default function Header(props) {
               ''
             )}
           </a>{' '}
-          <a href="#/signin"> SignIn</a>
+          
         </div>
       </header>
     );
