@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DisplayDemo from './Components/DemoFolder/DisplayDemo';
 import logoA from './Components/logoA.PNG'
 import DisplayItem from './Components/ItemFolder/DisplayItem';
+import Cart from './Components/CartFolder/Cart';
 
 
 
@@ -48,6 +49,11 @@ function App() {
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/shop">
                     Shop
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/cart">
+                    Cart
                   </a>
                 </li>
 
@@ -103,9 +109,13 @@ function App() {
 
         <Route path="/Register" element={<Users/>} />
 
-        <Route path="/Demo" element={<DisplayDemo/>} />
+        <Route path="/Shop" element={<DisplayDemo/>} />
 
-        <Route path="/Shop" element={<DisplayItem/>} />
+        {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
+
+        <Route path="/Cart" element={<Cart/>} />
+
+        {/* <Route path="/cart" element={<Cart selectedItem={selectedItem} />} /> */}
 
         {/* <Route path="/About us" element={<AboutUs/>} />  */} 
 
