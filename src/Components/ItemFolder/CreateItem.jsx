@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ItemProps from "./ItemsProp";
+import ItemProps from "./ItemProps";
+
 
 function CreateItem() {
 
@@ -8,7 +9,7 @@ function CreateItem() {
 
     useEffect(function () {
       axios
-        .get("http://localhost:8081/item/create")
+        .post("http://localhost:8081/item/create")
         .then((response) => {
           console.log("Response:", response);
 
@@ -36,12 +37,8 @@ function CreateItem() {
   
     return (
       <div>
-        <h2> Current List of Stock </h2>
-        <br />
-        <br />
         <div className="container-fluid">
           <div className="row">{itemArray}</div>
-          {/* this is the display oin the rows */}
         </div>
       </div>
     );

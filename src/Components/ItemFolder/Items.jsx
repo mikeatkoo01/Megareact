@@ -1,6 +1,9 @@
 import CreateItem from "./CreateItem";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import DisplayItem from "./DisplayItem";
+
+
 
 
 function Items() {
@@ -69,9 +72,17 @@ function Items() {
         </form>
         <br />
         <br />
-        <CreateItem />
+        <DisplayItem/>
+
+       
       </div>
+
+
+      
     );
-  }
+
+    
+
+        }
   
   export default Items;

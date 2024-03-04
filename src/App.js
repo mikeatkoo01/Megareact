@@ -1,8 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Home from './Components/ItemFolder/HomeFolder/Home';
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Items from './Components/ItemFolder/Items';
+import ShowCart from './Components/CartFolder/ShowCart';
+import { FaShoppingCart } from "react-icons/fa";
+import Users from './Components/UserFolder/Users';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import DisplayDemo from './Components/DemoFolder/DisplayDemo';
+import logoA from './Components/logoA.PNG'
+import DisplayItem from './Components/ItemFolder/DisplayItem';
+
+
 
 function App() {
   return (
@@ -10,26 +19,80 @@ function App() {
     <header>
   
     <Router>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Items</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">AboutUs</a>
-      </li>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+     
+          <div className="container-fluid bg-green ">
+            <a className="navbar-brand" href="/"></a>
+            <img src={logoA} width="80" height="50" alt="Logo" />
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/">
+                    Home
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/shop">
+                    Shop
+                  </a>
+                </li>
 
-    </ul>
-  </div>
+                <li className="nav-item">
+                  <a className="nav-link" href="/Items">
+                    Back Office
+                  </a>
+                </li>
+
+                <li className="nav-item">
+                  <a className="nav-link" href="/Register">
+                    Register
+                  </a>
+                </li>
+
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button onClick"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Account
+                  </a>
+                  <div className="dropdown-menu">
+                    <a className="dropdown-item" href="/UserManagement">
+                      Log off
+                    </a>
+                  </div>
+
+                  
+                </li>
+                <li className="nav-item">
+                  <ShowCart />
+                  <FaShoppingCart />
+
+                </li>
+              </ul>
+            </div>
+          </div>
+
 </nav>
+
+
 
 
       <Routes>
@@ -38,9 +101,13 @@ function App() {
 
         <Route path="/Items" element={<Items/>} /> 
 
-        {/* <Route path="/Cart" element={<Cart/>} />
+        <Route path="/Register" element={<Users/>} />
 
-        <Route path="/About us" element={<AboutUs/>} />  */}
+        <Route path="/Demo" element={<DisplayDemo/>} />
+
+        <Route path="/Shop" element={<DisplayItem/>} />
+
+        {/* <Route path="/About us" element={<AboutUs/>} />  */} 
 
       </Routes>
 
