@@ -51,11 +51,13 @@ function App() {
                     Shop
                   </a>
                 </li>
+
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/cart">
-                    Cart
+                  <a className="nav-link" href="/Register">
+                    Register
                   </a>
                 </li>
+              
 
                 <li className="nav-item">
                   <a className="nav-link" href="/Items">
@@ -63,33 +65,12 @@ function App() {
                   </a>
                 </li>
 
-                <li className="nav-item">
-                  <a className="nav-link" href="/Register">
-                    Register
-                  </a>
-                </li>
+                
 
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button onClick"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Account
-                  </a>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="/UserManagement">
-                      Log off
-                    </a>
-                  </div>
-
-                  
-                </li>
+              
                 <li className="nav-item">
-                  <ShowCart />
-                  <FaShoppingCart />
+                  {/* <ShowCart />
+                  <FaShoppingCart /> */}
 
                 </li>
               </ul>

@@ -9,7 +9,7 @@ export default function Basket(props) {
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
     return (
       // html tag to have element to the side
-      <aside className="block col-3">
+      <aside className="block col-5">
         <h2>Cart</h2>
         <div>
           {/* cartItem passed as prop from displayDemo. conditional rendering
@@ -39,7 +39,7 @@ export default function Basket(props) {
             <>
               <hr></hr>
               <div className="row">
-                <div className="col-2">Items Price</div>
+                <div className="col-2">Subtotal</div>
                 <div className="col-1 text-right">£{itemsPrice.toFixed(2)}</div>
               </div>
               <div className="row">
