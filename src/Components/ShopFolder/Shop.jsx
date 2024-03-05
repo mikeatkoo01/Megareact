@@ -5,7 +5,7 @@ import Basket from './Basket';
 // import data from './data';
 import axios from 'axios';
 
-function DisplayDemo() {
+function Shop() {
   // constructing assignment to extract products from data
   // products must then me passed to Main which is responsible for rendering products
   const [products, setProducts] = useState([]);
@@ -84,4 +84,4 @@ function DisplayDemo() {
     );
   }
   
-  export default DisplayDemo;
+  export default Shop;

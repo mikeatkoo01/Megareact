@@ -69,26 +69,33 @@ function Home(){
 
 {/* this is the input form, to create a user */}
 
-
+<p className="welcome">test</p>
 
 <label htmlFor="user"><strong>Username</strong> &nbsp;</label>
+<br/>
 <input 
             value={username}
             br
             onChange={(e) => setUsername(e.target.value)}
             id="fn"
             type="text"
-            class="form-control"
+            class="form-control, col-3"
+          
           ></input>
+
+<br/>
 <label htmlFor="pass"> <strong>Password</strong> &nbsp;</label>
+<br/>
 <input
             value={password}
             br
             onChange={(e) => setPassword(e.target.value)}
             id="ln"
             type="text"
-            class="form-control"
+            class="form-control, col-3"
           ></input>
+          <br/>
+          <br/>
 <button type="submit" className="btn btn-success btn-md">
             You call yourself a prime...user?: Submit your information for immediate verification
           </button>
@@ -103,7 +110,7 @@ function Home(){
 <h3>Don't have an account?</h3>
 
    
-    <Link to="/Register" className="btn btn-warning ">ENTER IF YOU DARE!!!</Link>
+    <Link to="/Register" className="btn btn-warning col-12 ">ENTER IF YOU DARE!!!</Link>
 
 
     <br />

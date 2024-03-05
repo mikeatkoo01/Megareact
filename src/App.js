@@ -7,7 +7,7 @@ import ShowCart from './Components/CartFolder/ShowCart';
 import { FaShoppingCart } from "react-icons/fa";
 import Users from './Components/UserFolder/Users';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DisplayDemo from './Components/DemoFolder/DisplayDemo';
+import Shop from './Components/ShopFolder/Shop';
 import logoA from './Components/logoA.PNG'
 import DisplayItem from './Components/ItemFolder/DisplayItem';
 import Cart from './Components/CartFolder/Cart';
@@ -109,15 +109,13 @@ function App() {
 
         <Route path="/Register" element={<Users/>} />
 
-        <Route path="/Shop" element={<DisplayDemo/>} />
+        <Route path="/Shop" element={<Shop/>} />
 
         {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
 
-        <Route path="/Cart" element={<Cart/>} />
+        {/* <Route path="/Cart" element={<Cart/>} /> */}
 
-        {/* <Route path="/cart" element={<Cart selectedItem={selectedItem} />} /> */}
-
-        {/* <Route path="/About us" element={<AboutUs/>} />  */} 
+  
 
       </Routes>
 

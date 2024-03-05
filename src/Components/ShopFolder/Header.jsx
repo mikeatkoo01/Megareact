@@ -7,9 +7,9 @@ export default function Header(props) {
       // standard header html tag
       <header className="block row center">
         <div>
-          <a href="#/">
+          <>
             <h1>Mega Shopping Cart</h1>
-          </a>
+          </>
         </div>
         {/* cart and sign in with anchors. Sign in not yet implemented -  */}
         <div>
