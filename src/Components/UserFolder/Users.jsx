@@ -1,5 +1,7 @@
 import axios from "axios";
 import {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -9,6 +11,7 @@ function Users() {
     const [lastName, setLastName] = useState("");
     const [username, setUsername] = useState("");
     const[password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     return ( 
 
@@ -28,7 +31,8 @@ function Users() {
         setLastName("");
         setUsername("");
         setPassword("");
-     
+        alert(`Welcome decepticon, return to the home page to log-in, ${username}`); // Display alert after successful creation
+        navigate("/"); // Navigate to shop page
       }
       )
       .catch((err) => console.error(err));
@@ -79,11 +83,12 @@ function Users() {
             br
             onChange={(e) => setPassword(e.target.value)}
             id="un"
-            type="text"
+            type="password"
             class="form-control"
           ></input>
 <button type="submit" className="btn btn-success btn-md">
-            Submit
+            Click to register!
+           
           </button>
 
           <br />

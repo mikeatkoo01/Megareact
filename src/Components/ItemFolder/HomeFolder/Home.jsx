@@ -86,7 +86,7 @@ function Home(){
             br
             onChange={(e) => setPassword(e.target.value)}
             id="ln"
-            type="text"
+            type="password"
             class="form-control, col-3"
           ></input>
           <br/>

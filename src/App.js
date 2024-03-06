@@ -11,6 +11,7 @@ import Shop from './Components/ShopFolder/Shop';
 import logoA from './Components/logoA.PNG'
 import DisplayItem from './Components/ItemFolder/DisplayItem';
 import Cart from './Components/CartFolder/Cart';
+import UpdateForm from './Components/ItemFolder/UpdateForm';
 
 
 
@@ -91,6 +92,8 @@ function App() {
         <Route path="/Register" element={<Users/>} />
 
         <Route path="/Shop" element={<Shop/>} />
+
+        <Route path="/Update" element={<UpdateForm/>} />
 
         {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
 
