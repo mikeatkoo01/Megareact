@@ -1,16 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Header';
 import Main from './Main';
 import Basket from './Basket';
-import data from './data';
+// import data from './data';
+import axios from 'axios';
 
-
-function DisplayDemo() {
+function Shop() {
   // constructing assignment to extract products from data
   // products must then me passed to Main which is responsible for rendering products
-    const { products } = data;
-    // defining state to manage cart items. cartItems defined as a hook- cart item default set as an array
-    const [cartItems, setCartItems] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+ 
     // event handler SET UP HERE to add items to cart
     const onAdd = (product) => {
       // exists is a variable that looks for id of product that you need to add if it exists- looking for an item 
@@ -50,6 +50,20 @@ function DisplayDemo() {
       }
     };
 
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('http://localhost:8081/item/read'); 
+          setProducts(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          // Handle error 
+        }
+      };
+  
+      fetchData();
+    }, []);
+
     // 1 div for header and 1 for main and basket which show side-by-side
     return (
       <div className="App">
@@ -70,4 +84,4 @@ function DisplayDemo() {
     );
   }
   
-  export default DisplayDemo;
+  export default Shop;

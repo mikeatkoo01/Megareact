@@ -1,4 +1,7 @@
 
+import { FaShoppingCart } from "react-icons/fa";
+
+
 
 // react functional component - props accepted from parent component
 export default function Header(props) {
@@ -7,13 +10,14 @@ export default function Header(props) {
       // standard header html tag
       <header className="block row center">
         <div>
-          <a href="#/">
-            <h1>Small Shopping Cart</h1>
-          </a>
+          <>
+            <h1>MEGA...tron SHOP&CART</h1>
+          </>
         </div>
         {/* cart and sign in with anchors. Sign in not yet implemented -  */}
         <div>
           <a href="#/cart">
+          <FaShoppingCart />
             Cart{' '}
             {/* if it does exists - not a 0 then render this button */}
             {props.countCartItems ? (
@@ -22,7 +26,7 @@ export default function Header(props) {
               ''
             )}
           </a>{' '}
-          <a href="#/signin"> SignIn</a>
+          
         </div>
       </header>
     );

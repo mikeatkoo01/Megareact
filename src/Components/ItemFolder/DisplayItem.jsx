@@ -1,12 +1,13 @@
 
 import axios from "axios";
-import { useState } from "react";
+import { useState, useNavigate } from "react";
+import { Navigate } from 'react-router-dom';
 
 function DisplayItem() {
 
 
     const [items, setItems] = useState("");
-
+    const [selectedItem, setSelectedItem] = useState("");
 
 
     function handleClick() {
@@ -20,6 +21,16 @@ function DisplayItem() {
             .catch(err => console.error(err))
 
     };
+
+
+    const handleClick2 = (selectedItem) => {
+        axios.get("http://localhost:8081/item/read" + selectedItem.id)
+          .then((response) => {
+            setSelectedItem(response.data); 
+            Navigate("/cart"); 
+          })
+          .catch((err) => console.error(err));
+      };
 
 
     const displayItems = [];
@@ -55,7 +66,25 @@ function DisplayItem() {
                             })
                             .catch(err => console.error(err));
                     }}>DELETE</button></p>
-                    <p><button> BUY </button></p>
+                    <p>
+                    <button
+  type="button"
+  onClick={() => handleClick2(selectedItem)} 
+>
+  BUY
+</button>
+</p>
+
+
+
+
+
+
+
+
+
+
+
 
                         </div>
                     </div>
@@ -69,7 +98,16 @@ function DisplayItem() {
 
 
     return (
-        <>
+<>
+      
+            <button class="btn btn-light btn-lg" onClick={handleClick}>Display current  the Stock</button>
+            <div  className='container'>
+                <div className='row'>
+                
+                    {displayItems}
+                </div>
+            </div>
+  
         <br />
         <div class="content-slider">
   <div class="slider">
@@ -96,16 +134,11 @@ function DisplayItem() {
   </div>
 </div>
 
+</>
 
-        <h2>Current Stock</h2>
-            <button class="btn btn-light btn-lg" onClick={handleClick}>Click to see what you can buy below...</button>
-            <div  className='container'>
-                <div className='row'>
-                
-                    {displayItems}
-                </div>
-            </div>
-        </>
+
+
+        
     );
 }
 

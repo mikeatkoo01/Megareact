@@ -7,8 +7,8 @@ export default function Main(props) {
     return (
       // html tag main for main page of website page
       // col-2 2/3 share of screen
-      <main className="block col-6">
-        <h2>Products</h2>
+      <main className="block col-5">
+        <h2>Mega...tron-tastic Products</h2>
         <div className="row">
           {/* to render we use name of array with map method  each element of array is now converted to jsx object*/}
           {products.map((product) => (

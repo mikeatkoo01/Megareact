@@ -33,10 +33,12 @@ a {
   flex: 2;
 }
 .block {
-  background-color: #e0e0e0;
+  background-color: rgb(248, 250, 245);;
   padding: 1rem;
   margin: 0.5rem;
   border-radius: 0.5rem;
+  border-color:#404040;
+  border-style: solid;
 }
 .text-right {
   text-align: right;
@@ -55,11 +57,11 @@ button {
   cursor: pointer;
 }
 button.add {
-  background-color: #40c0f0;
+  background-color: #0cc021;
   width: 1.5rem;
 }
 button.remove {
-  background-color: #f04040;
+  background-color: #eb9e5b;
   width: 1.5rem;
 }
 button.badge {

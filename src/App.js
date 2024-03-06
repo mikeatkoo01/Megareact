@@ -7,9 +7,13 @@ import ShowCart from './Components/CartFolder/ShowCart';
 import { FaShoppingCart } from "react-icons/fa";
 import Users from './Components/UserFolder/Users';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DisplayDemo from './Components/DemoFolder/DisplayDemo';
+import Shop from './Components/ShopFolder/Shop';
 import logoA from './Components/logoA.PNG'
 import DisplayItem from './Components/ItemFolder/DisplayItem';
+import Cart from './Components/CartFolder/Cart';
+import Payment from './Components/ShopFolder/Payment';
+import Footer from './Components/Footer';
+
 
 
 
@@ -52,38 +56,24 @@ function App() {
                 </li>
 
                 <li className="nav-item">
+                  <a className="nav-link" href="/Register">
+                    Register
+                  </a>
+                </li>
+              
+
+                <li className="nav-item">
                   <a className="nav-link" href="/Items">
                     Back Office
                   </a>
                 </li>
 
-                <li className="nav-item">
-                  <a className="nav-link" href="/Register">
-                    Register
-                  </a>
-                </li>
+                
 
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button onClick"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Account
-                  </a>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="/UserManagement">
-                      Log off
-                    </a>
-                  </div>
-
-                  
-                </li>
+              
                 <li className="nav-item">
-                  <ShowCart />
-                  <FaShoppingCart />
+                  {/* <ShowCart />
+                  <FaShoppingCart /> */}
 
                 </li>
               </ul>
@@ -103,14 +93,18 @@ function App() {
 
         <Route path="/Register" element={<Users/>} />
 
-        <Route path="/Demo" element={<DisplayDemo/>} />
+        <Route path="/Shop" element={<Shop/>} />
 
-        <Route path="/Shop" element={<DisplayItem/>} />
+        <Route path="/payment" element={<Payment/>} />
 
-        {/* <Route path="/About us" element={<AboutUs/>} />  */} 
+        {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
+
+        {/* <Route path="/Cart" element={<Cart/>} /> */}
+
+  
 
       </Routes>
-
+      <Footer/>
     </Router>
 
   </header>
