@@ -31,7 +31,7 @@ function CreateItem() {
 
           key={item.name + " " + item.quantity}
           name={item.name}
-          price={item.price}
+          price={item.price.toFixed(2)}
           quantity={item.quantity}
         
         />

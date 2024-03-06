@@ -23,14 +23,19 @@ function DisplayItem() {
     };
 
 
+ 
+
     const handleClick2 = (selectedItem) => {
-        axios.get("http://localhost:8081/item/read" + selectedItem.id)
-          .then((response) => {
-            setSelectedItem(response.data); 
-            Navigate("/cart"); 
-          })
-          .catch((err) => console.error(err));
-      };
+  axios.patch("http://localhost:8081/item/update" + selectedItem.id)
+    .then((response) => {
+     setSelectedItem(response.data); 
+     Navigate("/update"); 
+    })
+    .catch((err) => console.error(err));
+
+
+
+   };
 
 
     const displayItems = [];
@@ -67,12 +72,15 @@ function DisplayItem() {
                             .catch(err => console.error(err));
                     }}>DELETE</button></p>
                     <p>
-                    <button
+
+   <button
   type="button"
   onClick={() => handleClick2(selectedItem)} 
 >
-  BUY
+  UPDATE
 </button>
+
+                  
 </p>
 
 

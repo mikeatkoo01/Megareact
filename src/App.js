@@ -97,6 +97,7 @@ function App() {
 
         <Route path="/payment" element={<Payment/>} />
 
+
         {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
 
         {/* <Route path="/Cart" element={<Cart/>} /> */}

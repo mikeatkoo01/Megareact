@@ -7,7 +7,7 @@ export default function Product(props) {
     return (
       <div>
         {/* small image implemented - see css */}
-        <img className="small" src={product.image} alt={product.name} />
+        <img className="small" src={product.uploadImages} alt={product.name} />
         {/* show product name and price on page */}
         <h3>{product.name}</h3>
         <div>£{product.price}</div>
@@ -19,4 +19,7 @@ export default function Product(props) {
       </div>
     );
   }
+
+
+
   
