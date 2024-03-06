@@ -1,11 +1,17 @@
+import {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
+
+
 export default function Basket(props) {
+  
+    
     const { cartItems, onAdd, onRemove } = props;
 
     // this is for order summary in the cart
     // used to calculate including tax
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
-    const taxPrice = itemsPrice * 0.14;
-    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    const taxPrice = 1.07;
+    const shippingPrice = itemsPrice > 2000 ? 0 : 4;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
     return (
       // html tag to have element to the side
@@ -63,9 +69,7 @@ export default function Basket(props) {
               </div>
               <hr />
               <div className="row">
-                <button onClick={() => alert('please enter card details & transform')}>
-                  Checkout
-                </button>
+              <Link to="/payment" className="btn btn-warning ">Checkout</Link>
               </div>
             </>
           )}

@@ -98,7 +98,16 @@ function DisplayItem() {
 
 
     return (
-        <>
+<>
+      
+            <button class="btn btn-light btn-lg" onClick={handleClick}>Display current  the Stock</button>
+            <div  className='container'>
+                <div className='row'>
+                
+                    {displayItems}
+                </div>
+            </div>
+  
         <br />
         <div class="content-slider">
   <div class="slider">
@@ -125,16 +134,11 @@ function DisplayItem() {
   </div>
 </div>
 
+</>
 
-        <h2>Current Stock</h2>
-            <button class="btn btn-light btn-lg" onClick={handleClick}>Click to see what you can buy below...</button>
-            <div  className='container'>
-                <div className='row'>
-                
-                    {displayItems}
-                </div>
-            </div>
-        </>
+
+
+        
     );
 }
 

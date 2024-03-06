@@ -116,7 +116,7 @@ function Home(){
 
       <br/>
 
-        <Footer/>
+       
 
         </div>
     )

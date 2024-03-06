@@ -11,6 +11,9 @@ import Shop from './Components/ShopFolder/Shop';
 import logoA from './Components/logoA.PNG'
 import DisplayItem from './Components/ItemFolder/DisplayItem';
 import Cart from './Components/CartFolder/Cart';
+import Payment from './Components/ShopFolder/Payment';
+import Footer from './Components/Footer';
+
 
 
 
@@ -92,6 +95,8 @@ function App() {
 
         <Route path="/Shop" element={<Shop/>} />
 
+        <Route path="/payment" element={<Payment/>} />
+
         {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
 
         {/* <Route path="/Cart" element={<Cart/>} /> */}
@@ -99,7 +104,7 @@ function App() {
   
 
       </Routes>
-
+      <Footer/>
     </Router>
 
   </header>
