@@ -10,6 +10,7 @@ function Items() {
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
     const [quantity, setQuantity] = useState("");
+    const [uploadImages, setUploadImages]= useState("");
 
   
   
@@ -30,6 +31,7 @@ function Items() {
                 setName("");
                 setPrice("");
                 setQuantity("");
+                setUploadImages("")
               
               })
               .catch((err) => console.error(err));
@@ -64,6 +66,14 @@ function Items() {
             type="text"
             class="form-control"
           ></input>
+           <label htmlFor="ad">Image &nbsp; &nbsp; &nbsp;</label>
+           <input
+  value={uploadImages}
+  onChange={(e) => setUploadImages(e.target.value)}
+  id="uploadImage"
+  type="text"
+  class="form-control"
+/>
           <br />
           <button type="submit" className="btn btn-success btn-md">
             Submit

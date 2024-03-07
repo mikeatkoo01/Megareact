@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-
+import axios from "axios";
+import { useParams } from 'react-router-dom';
 
 function UpdateItem() {
 
@@ -7,6 +8,16 @@ function UpdateItem() {
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
     const [quantity, setQuantity] = useState("");
+
+    const [item, setItem] = useState("");
+    const { itemId } = useParams();
+    
+    const [uploadImages, setUploadImages]= useState("");
+
+
+
+  
+      
 
 
     return ( <div>
@@ -17,31 +28,28 @@ function UpdateItem() {
             e.preventDefault();
 
 
-
-
-            // axios.patch("http://localhost:8081/items/update/" + props.id)
-            // .then(res => {props.getSellers()})
-            // .catch(err => console.error(err));
-
-
-            axios
-              .patch("http://localhost:8081/item/update", {
+            axios.patch(`http://localhost:8081/item/update/${itemId}`, {
                 name,
                 price,
                 quantity,
-                
-              })
-              .then((response) => {
-                setName("");
-                setPrice("");
-                setQuantity("");
-              
-              })
-              .catch((err) => console.error(err));
-          }}
+                uploadImages,})
+          .then((response) => {
+           setItem(response.data); 
+           setName("");
+           setPrice("");
+           setQuantity("");
+           setUploadImages("");
+        
+          })
+          .catch((err) => console.error(err));
+      
+      
+      
+         }}
+             
         >
+          <div>
           
-          {/* this is the input form on the items page  */}
           {" "}
           <h1>Update Item &nbsp;</h1>
           <label htmlFor="name"> Name &nbsp;</label>
@@ -69,16 +77,23 @@ function UpdateItem() {
             type="text"
             class="form-control"
           ></input>
+           <label htmlFor="ad">Image &nbsp; &nbsp; &nbsp;</label>
+           <input
+  value={uploadImages}
+  onChange={(e) => setUploadImages(e.target.value)}
+  id="uploadImage"
+  type="text"
+  class="form-control"
+/>
           <br />
           <button type="submit" className="btn btn-success btn-md">
             Submit
           </button>
+
+          </div>
           <br />
         </form>
-        <br />
-
-
-
+        
 
 
     </div>

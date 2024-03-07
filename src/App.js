@@ -13,6 +13,7 @@ import DisplayItem from './Components/ItemFolder/DisplayItem';
 import Cart from './Components/CartFolder/Cart';
 import Payment from './Components/ShopFolder/Payment';
 import Footer from './Components/Footer';
+import UpdateItem from './Components/ItemFolder/UpdateItem';
 
 
 
@@ -56,14 +57,14 @@ function App() {
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/Register">
+                  <a className="nav-link" href="/register">
                     Register
                   </a>
                 </li>
               
 
                 <li className="nav-item">
-                  <a className="nav-link" href="/Items">
+                  <a className="nav-link" href="/manage">
                     Back Office
                   </a>
                 </li>
@@ -89,16 +90,16 @@ function App() {
 
         <Route path="/" element={<Home/>} />
 
-        <Route path="/Items" element={<Items/>} /> 
+        <Route path="/manage" element={<Items/>} /> 
 
-        <Route path="/Register" element={<Users/>} />
+        <Route path="/register" element={<Users/>} />
 
-        <Route path="/Shop" element={<Shop/>} />
+        <Route path="/shop" element={<Shop/>} />
 
         <Route path="/payment" element={<Payment/>} />
 
 
-        {/* <Route path="/Shop" element={<DisplayItem/>} /> */}
+        <Route path="/update/:itemId" element={<UpdateItem />} />
 
         {/* <Route path="/Cart" element={<Cart/>} /> */}
 

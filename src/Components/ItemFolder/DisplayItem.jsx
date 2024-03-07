@@ -1,14 +1,15 @@
 
 import axios from "axios";
-import { useState, useNavigate } from "react";
-import { Navigate } from 'react-router-dom';
+import { useState } from "react";
+
+import { useNavigate } from "react-router";
 
 function DisplayItem() {
 
 
     const [items, setItems] = useState("");
     const [selectedItem, setSelectedItem] = useState("");
-
+    const navigate = useNavigate();
 
     function handleClick() {
 
@@ -25,18 +26,7 @@ function DisplayItem() {
 
  
 
-    const handleClick2 = (selectedItem) => {
-  axios.patch("http://localhost:8081/item/update" + selectedItem.id)
-    .then((response) => {
-     setSelectedItem(response.data); 
-     Navigate("/update"); 
-    })
-    .catch((err) => console.error(err));
-
-
-
-   };
-
+   
 
     const displayItems = [];
 
@@ -52,7 +42,8 @@ function DisplayItem() {
                         <div className='card-text'>
 
                             <p className='card-title '> <b>Name:</b> {item.name}</p>
-                            <p><b>Price:</b> {item.price}</p>
+                            <p> {item.price}</p>
+                            <img src={item.uploadImages} alt="Product Image" style={{ width: '100px', height: '100px' }} />
                             <p><b>Qty:</b> {item.quantity}</p>
                             
                            
@@ -75,10 +66,9 @@ function DisplayItem() {
 
    <button
   type="button"
-  onClick={() => handleClick2(selectedItem)} 
->
-  UPDATE
-</button>
+   onClick={() => navigate("/update/" + item.id)} >UPDATE ITEM</button>
+
+
 
                   
 </p>
@@ -108,7 +98,7 @@ function DisplayItem() {
     return (
 <>
       
-            <button class="btn btn-light btn-lg" onClick={handleClick}>Display current  the Stock</button>
+            <button class="btn btn-light btn-lg" onClick={handleClick}><strong>Display Available Stock</strong></button>
             <div  className='container'>
                 <div className='row'>
                 

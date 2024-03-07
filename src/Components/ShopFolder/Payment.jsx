@@ -10,31 +10,31 @@ function Payment() {
         <br />
         <form style={{fontSize:"15px"}} onSubmit={handleSubmit}>
           <label>
-            Name
+            Name: As it appears on the card
             <br/>
             <input type="text" />
           </label>
           <br />
           <label>
-          Pan Number
+          Long Card Number: PAN
             <br/>
             <input type="text" />
           </label>
           <br />
           <label>
-            exp date
+            Card Expiry Date: mm/yy
             <br/>
             <input type="text" />
           </label>
           <br/>
           <label>
-            3 digits
+            CVC
             <br/>
             <input type="text" />
           </label>
           <br/>
           <label>
-            postcode
+            Postcode
             <br/>
             <input type="text" />
           </label>

@@ -29,7 +29,33 @@ function Shop() {
       } else {
         setCartItems([...cartItems, { ...product, qty: 1 }]);
       }
+ 
+ 
+
+   
+    
+   
+      const url = `http://localhost:8081/item/update/${product.id}`; 
+
+      const cartId = 1; 
+
+const data = { cart_id: cartId }; 
+    
+      axios.patch(url, data)
+        .then(response => {
+          console.log('Item updated:', response.data);
+        })
+        .catch(error => {
+          console.error('Error updating item:', error);
+        });
     };
+
+
+
+
+
+
+
 // onAdd function is then passed to both the basket and main where they will be used
 
     const onRemove = (product) => {
