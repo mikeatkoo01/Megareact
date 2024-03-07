@@ -31,24 +31,35 @@ function Shop() {
       }
  
  
-
+      // axios.post("http://localhost:8082/cart/create", )
+      // .then((response) => {
+      
+      //   alert("Cart created successfully");
+        
+      // })
+      // .catch((err) => console.error(err));
    
-    
    
-      const url = `http://localhost:8081/item/update/${product.id}`; 
+   
+      // const cartId = 1; 
 
-      const cartId = 1; 
 
-const data = { cart_id: cartId }; 
-    
-      axios.patch(url, data)
-        .then(response => {
-          console.log('Item updated:', response.data);
+
+
+        axios.patch(`http://localhost:8081/item/update/${products.id}`, {
+          
+        cart: {id:1}
         })
-        .catch(error => {
-          console.error('Error updating item:', error);
-        });
-    };
+          .then(() => {
+            alert("Item added to cart successfully");
+           
+          })
+          .catch((err) => console.error(err));
+      };
+
+
+
+
 
 
 
