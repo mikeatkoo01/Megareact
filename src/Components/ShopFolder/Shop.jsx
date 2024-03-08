@@ -13,6 +13,8 @@ function Shop() {
  
     // event handler SET UP HERE to add items to cart
     const onAdd = (product) => {
+
+      
       // exists is a variable that looks for id of product that you need to add if it exists- looking for an item 
       // with id equal to the id of the product that we want to add
       const exist = cartItems.find((x) => x.id === product.id);
@@ -29,39 +31,25 @@ function Shop() {
       } else {
         setCartItems([...cartItems, { ...product, qty: 1 }]);
       }
- 
- 
-      // axios.post("http://localhost:8082/cart/create", )
-      // .then((response) => {
       
-      //   alert("Cart created successfully");
-        
-      // })
-      // .catch((err) => console.error(err));
-   
-   
-   
-      // const cartId = 1; 
+
+       axios.patch(`http://localhost:8081/item/update/${product.id}/1`, {
+        cart: {
+          id: 1 
+        }
+      })
 
 
-
-
-        axios.patch(`http://localhost:8081/item/update/${products.id}`, {
-          
-        cart: {id:1}
-        })
-          .then(() => {
-            alert("Item added to cart successfully");
+          .then(response =>{
+            console.log ("Item added to cart:" , response.data);
+          }
            
-          })
-          .catch((err) => console.error(err));
-      };
+          )
+          .catch(error => {
+            alert("Please create a cart before shopping")
+            console.error("Error adding item to cart:", error);
 
-
-
-
-
-
+          });}
 
 
 
